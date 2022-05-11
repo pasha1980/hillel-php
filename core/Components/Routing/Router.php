@@ -31,9 +31,9 @@ class Router implements RouteInterface
             }
         }
 
-        if (isset($controller) && isset($method) && method_exists($controller, $method)) {
-            return function () use ($controller, $method) {
-                return call_user_func([$controller, $method]);
+        if (isset($controller, $method) && method_exists($controller, $method)) {
+            return static function () use ($controller, $method) {
+                return $controller->$method();
             };
         }
 
