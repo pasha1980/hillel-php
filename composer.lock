@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c2eec58b6b091ba94d79696d44642cea",
+    "content-hash": "acea833ec7ad627576506adb0440c750",
     "packages": [
         {
             "name": "aigletter/contracts",
@@ -45,6 +45,46 @@
                 "source": "https://github.com/aigletter/contracts/tree/1.0.2"
             },
             "time": "2022-05-02T20:50:26+00:00"
+        },
+        {
+            "name": "mursalov/routing",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MursalovKenan/routing.git",
+                "reference": "166e6cfe6775039536984b725da4512856ea0c7c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MursalovKenan/routing/zipball/166e6cfe6775039536984b725da4512856ea0c7c",
+                "reference": "166e6cfe6775039536984b725da4512856ea0c7c",
+                "shasum": ""
+            },
+            "require": {
+                "aigletter/contracts": "1.0.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mursalov\\Routing\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kenan Mursalov",
+                    "email": "kenan.mursalov@gmail.com"
+                }
+            ],
+            "description": "Routing for our best framework!!!",
+            "support": {
+                "issues": "https://github.com/MursalovKenan/routing/issues",
+                "source": "https://github.com/MursalovKenan/routing/tree/1.0.0"
+            },
+            "time": "2022-05-12T06:41:32+00:00"
         },
         {
             "name": "psr/simple-cache",
