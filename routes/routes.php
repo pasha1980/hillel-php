@@ -11,3 +11,5 @@ use Mursalov\Routing\Router;
 $router->addRoute('/', [HomeController::class, 'index']);
 $router->addRoute('/shop/show', [ShopController::class, 'show']);
 $router->addRoute('/coin/flip', [CoinFlipController::class, 'flip']);
+//test exception
+$router->addRoute('/coin/flipflip', [CoinFlipController::class, 'flipflip']);

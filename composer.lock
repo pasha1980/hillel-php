@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "acea833ec7ad627576506adb0440c750",
+    "content-hash": "fdb94f04ef238e6f0ee93c113684cf03",
     "packages": [
         {
             "name": "aigletter/contracts",
@@ -48,21 +48,22 @@
         },
         {
             "name": "mursalov/routing",
-            "version": "1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MursalovKenan/routing.git",
-                "reference": "166e6cfe6775039536984b725da4512856ea0c7c"
+                "reference": "ebad65c5d9fc9fd7b89e2a425ba554110f412c4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MursalovKenan/routing/zipball/166e6cfe6775039536984b725da4512856ea0c7c",
-                "reference": "166e6cfe6775039536984b725da4512856ea0c7c",
+                "url": "https://api.github.com/repos/MursalovKenan/routing/zipball/ebad65c5d9fc9fd7b89e2a425ba554110f412c4e",
+                "reference": "ebad65c5d9fc9fd7b89e2a425ba554110f412c4e",
                 "shasum": ""
             },
             "require": {
                 "aigletter/contracts": "1.0.2"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -82,9 +83,9 @@
             "description": "Routing for our best framework!!!",
             "support": {
                 "issues": "https://github.com/MursalovKenan/routing/issues",
-                "source": "https://github.com/MursalovKenan/routing/tree/1.0.0"
+                "source": "https://github.com/MursalovKenan/routing/tree/master"
             },
-            "time": "2022-05-12T06:41:32+00:00"
+            "time": "2022-05-25T10:07:18+00:00"
         },
         {
             "name": "psr/simple-cache",
@@ -141,7 +142,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "mursalov/routing": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

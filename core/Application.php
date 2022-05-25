@@ -6,6 +6,9 @@ use Aigletter\App\Controllers\HomeController;
 use Aigletter\App\Controllers\ShopController;
 use Aigletter\Framework\Exceptions\GetComponentException;
 use Aigletter\Framework\Interfaces\RunnableInterface;
+use Mursalov\Routing\Exceptions\BadRequestException;
+use Mursalov\Routing\Exceptions\HttpException;
+use Mursalov\Routing\Exceptions\NotFoundException;
 
 class Application implements RunnableInterface
 {
@@ -30,8 +33,14 @@ class Application implements RunnableInterface
     {
         $router = $this->getComponent('router');
         require_once __DIR__ . '/../routes/routes.php';
-        $action = $router->route($_SERVER['REQUEST_URI']);
-        return $action();
+        try {
+            $action = $router->route($_SERVER['REQUEST_URI']);
+            return $action();
+        } catch (HttpException $exception) {
+            $code = $exception->getCode();
+            http_response_code($code);
+            echo '<h2>' . $code . ' ' . $exception->getMessage() . '</h2>';
+        }
     }
 
     public function getComponent($key)
