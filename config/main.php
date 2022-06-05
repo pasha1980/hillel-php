@@ -14,6 +14,9 @@ return [
         ],
         'test' => [
             'factory' => \Aigletter\App\Components\Test\TestFactory::class,
+        ],
+        'DB' => [
+            'factory' => Aigletter\Framework\Components\DB\DBFactory::class,
         ]
     ]
 ];

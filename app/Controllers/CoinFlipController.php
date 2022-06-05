@@ -7,7 +7,7 @@ class CoinFlipController
     /**
      * @throws \Exception
      */
-    public function flip($name)
+    public function flip($name): void
     {
         echo 'Hello ' . $name . ' your answer is ';
         $flipSide = random_int(0, 1);
