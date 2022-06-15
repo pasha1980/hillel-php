@@ -21,6 +21,8 @@
         "aigletter/contracts": "^1.0.0",
         "mursalov/routing": "dev-master",
         "ext-pdo": "*",
-        "mursalov/query-builder": "dev-master"
+        "mursalov/query-builder": "dev-master",
+        "guzzlehttp/guzzle": "7.4.4",
+        "ext-json": "*"
     }
 }
