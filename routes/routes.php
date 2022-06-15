@@ -1,6 +1,7 @@
 <?php
 
 use Aigletter\App\Controllers\CoinFlipController;
+use Aigletter\App\Controllers\CredentialsViewController;
 use Aigletter\App\Controllers\ExternalAuth\GoogleAuthController;
 use Aigletter\App\Controllers\getUserAgeController;
 use Aigletter\App\Controllers\HomeController;
@@ -15,3 +16,5 @@ $router->addRoute('/age', [getUserAgeController::class, 'usersAge']);
 
 $router->addRoute('/auth/google', [GoogleAuthController::class, 'getLink']);
 $router->addRoute('/redirect/google', [GoogleAuthController::class, 'getUserData']);
+
+$router->addRoute('/credentials/view', [CredentialsViewController::class, 'viewCredentials']);

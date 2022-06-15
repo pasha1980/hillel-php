@@ -29,8 +29,31 @@ class Application implements RunnableInterface
         return self::$instance;
     }
 
+    private function putAllEnv(): void
+    {
+        /*
+         * 1) Прочитать файл .env
+         * 2) Каждый параметр в цикле занести в окружение
+         */
+
+        $fileName = __DIR__ . '/../.env';
+        $file = fopen($fileName, 'r');
+        $params = explode("\n", fread($file, filesize($fileName)));
+        fclose($file);
+        foreach ($params as $param) {
+            if ($param == '') {
+                continue;
+            }
+            putenv($param);
+
+            $env = explode('=', $param);
+            $_ENV[$env[0]] = $env[1];
+        }
+    }
+
     public function run()
     {
+        $this->putAllEnv();
         $router = $this->getComponent('router');
         require_once __DIR__ . '/../routes/routes.php';
         try {

@@ -8,8 +8,8 @@ class GoogleAuthController
 {
     public function getLink()
     {
-        $clientId = '81603979826-fkgpf0po9r9nmid0u8fen2db7uejo4re.apps.googleusercontent.com';
-        $redirectUri = 'http://localhost:8080/redirect/google';
+        $clientId = getenv('GOOGLE_CLIENT_ID');
+        $redirectUri = getenv('GOOGLE_REDIRECT_URI');
 
         /*
          * https://accounts.google.com/o/oauth2/auth
@@ -38,9 +38,9 @@ class GoogleAuthController
 
     public function getUserData(string $code)
     {
-        $clientId = '81603979826-fkgpf0po9r9nmid0u8fen2db7uejo4re.apps.googleusercontent.com';
-        $clientSecret = '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';
-        $redirectUri = 'http://localhost:8080/redirect/google';
+        $clientId = getenv('GOOGLE_CLIENT_ID');
+        $clientSecret = getenv('GOOGLE_CLIENT_SECRET');
+        $redirectUri = getenv('GOOGLE_REDIRECT_URI');
 
         $httpClient = new Client();
 
