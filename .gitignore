@@ -2,4 +2,5 @@
 vendor
 data/*/*
 !data/*/.gitkeep
+docker/db-data
 #.env
