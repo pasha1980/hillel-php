@@ -1,9 +1,4 @@
 FROM php:8.1-fpm
-
-RUN pecl install xdebug \
-    && docker-php-ext-enable xdebug \
-
-
-#
+COPY . /var/www/app
 WORKDIR /var/www/app
 CMD ["php-fpm"]
